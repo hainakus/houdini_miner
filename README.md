@@ -59,6 +59,7 @@ Paste the following block into the flight sheet **Extra config arguments** field
 --PEARL_ENABLE_ZK=0
 --PEARL_RAYON_THREADS=4
 --PEARL_SUBMIT_HS=1
+--tui
 ```
 
 ## Configuration reference
