@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Houdini — Mining. Unlocked.</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><div class="mark">#</div><div><strong>HOUDINI</strong><span>MINING. UNLOCKED.</span></div></div>
+    <nav>
+      <a class="active">Dashboard</a><a>Workers</a><a>Mining</a><a>Performance</a><a>Pool</a><a>Logs</a><a>Settings</a>
+    </nav>
+    <div class="status"><i></i> MINER ONLINE<br><small>HOU-GEMM · v0.1</small></div>
+  </aside>
+  <main>
+    <header><div><p class="eyebrow">HOUDINI MINER / OVERVIEW</p><h1>Mining Dashboard</h1></div><button>● LIVE</button></header>
+    <section class="hero">
+      <div><span class="label">TOTAL HASHRATE</span><strong>125.42 <em>TH/s</em></strong><p>+8.4% vs. previous hour</p></div>
+      <div class="hero-ring"><span>100%</span><small>GPU UTILIZATION</small></div>
+    </section>
+    <section class="stats">
+      <article><span>ACCEPTED SHARES</span><b>1,284</b><small>+23 today</small></article>
+      <article><span>POOL DIFFICULTY</span><b>2.00M</b><small>Stratum / Pearl</small></article>
+      <article><span>EFFICIENCY</span><b>0.58 J/TH</b><small>220 W limit</small></article>
+      <article><span>UPTIME</span><b>18h 42m</b><small>100% online</small></article>
+    </section>
+    <section class="grid">
+      <div class="panel workers"><div class="panel-head"><h2>GPU WORKERS</h2><span>6 / 6 ONLINE</span></div><table><thead><tr><th>WORKER</th><th>HASHRATE</th><th>TEMP</th><th>POWER</th><th>STATUS</th></tr></thead><tbody>
+      <tr><td>J-3080-TI</td><td>21.1 TH/s</td><td>52°C</td><td>182 W</td><td><i></i>ONLINE</td></tr>
+      <tr><td>J-3090-T8</td><td>24.8 TH/s</td><td>55°C</td><td>221 W</td><td><i></i>ONLINE</td></tr>
+      <tr><td>J-3080-T8</td><td>20.7 TH/s</td><td>51°C</td><td>181 W</td><td><i></i>ONLINE</td></tr>
+      <tr><td>J-3070-TI</td><td>18.4 TH/s</td><td>49°C</td><td>165 W</td><td><i></i>ONLINE</td></tr>
+      </tbody></table></div>
+      <div class="panel pipeline"><div class="panel-head"><h2>PIPELINE</h2><span>LIVE</span></div><div class="flow"><div>DATA-GEN<b>156.3 M/s</b></div><div>PREFILTER<b>2,385 cand/s</b></div><div>GEMM<b>107 TMAC/s</b></div><div>CONSUMER<b>42.2 shares/s</b></div></div><div class="queue">QUEUE DEPTH <strong>10,432</strong></div></div>
+    </section>
+    <section class="panel telemetry"><div class="panel-head"><h2>RUNTIME TELEMETRY</h2><span>CUDA / HOU-GEMM</span></div><div class="telemetry-grid"><div><span>GEMM LATENCY</span><b>5.2 ms</b></div><div><span>PREFILTER LATENCY</span><b>595 μs</b></div><div><span>VRAM TARGET</span><b>4,096 MB</b></div><div><span>CONSUMER SLOTS</span><b>1</b></div><div><span>SYNC MODE</span><b>BLOCKING</b></div><div><span>DEVICE</span><b>RTX 3080</b></div></div></section>
+  </main>
+</body>
+</html>
