@@ -1,27 +1,48 @@
- Houdini is a GPU-optimized miner for the Pearl proof-of-work algorithm. It is designed for miners who want a fast, stable, and easy-to-deploy solution for connecting to Pearl-compatible mining pools via the Stratum protocol.
+# Houdini
 
- Key highlights
+Houdini is a GPU-optimized miner for the Pearl proof-of-work algorithm. It is designed for miners who want a fast, stable, and easy-to-deploy solution for connecting to Pearl-compatible mining pools via the Stratum protocol.
 
-   • GPU-first design – leverages modern graphics cards to deliver high-throughput hashing.
-   • Multi-platform – runs on Linux and is packaged for HiveOS.
-   • Stratum support – connects directly to pools with standard mining protocol messages.
-   • Lightweight and focused – minimal setup, suitable for both single rigs and larger farms.
-   • Regular releases – versioned HiveOS packages and binaries for straightforward installation and updates.
+## Houdini UI
 
- Getting started
+The repository now includes the first **Houdini Dashboard** foundation based on the supplied visual references: dark graphite surfaces, Houdini gold, restrained violet accents, compact telemetry and GPU-first operational information.
 
-   1. Download the latest release package for your platform.
-   2. Configure your pool, worker, and wallet.
-   3. Start mining.
+Open the prototype locally with `ui/index.html`.
 
- For build instructions, configuration details, and advanced options, see the repository documentation.
+### Dashboard surfaces
 
+- Total hashrate, accepted shares, pool difficulty, efficiency and uptime
+- GPU worker monitoring
+- DATA-GEN → PREFILTER → GEMM → CONSUMER pipeline telemetry
+- Runtime CUDA/HOU-GEMM metrics
+- Responsive layout suitable for desktop and smaller displays
 
- # HiveOS Flight Sheet – Houdini HOU-GEMM User Configuration
+See:
+
+- [`docs/BRANDING.md`](docs/BRANDING.md)
+- [`docs/UI_REFERENCE.md`](docs/UI_REFERENCE.md)
+- [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)
+
+## Key highlights
+
+- GPU-first design – leverages modern graphics cards to deliver high-throughput hashing.
+- Multi-platform – runs on Linux and is packaged for HiveOS.
+- Stratum support – connects directly to pools with standard mining protocol messages.
+- Lightweight and focused – minimal setup, suitable for both single rigs and larger farms.
+- Regular releases – versioned HiveOS packages and binaries for straightforward installation and updates.
+
+## Getting started
+
+1. Download the latest release package for your platform.
+2. Configure your pool, worker, and wallet.
+3. Start mining.
+
+For build instructions, configuration details, and advanced options, see the repository documentation.
+
+## HiveOS Flight Sheet – Houdini HOU-GEMM User Configuration
 
 This document describes the recommended flight-sheet configuration for running the **Houdini HOU-GEMM** backend on HiveOS.
 
-## Creating the flight sheet
+### Creating the flight sheet
 
 1. Open the HiveOS web interface.
 2. Go to **Flight Sheets** and click **Add Flight Sheet**.
@@ -31,7 +52,7 @@ This document describes the recommended flight-sheet configuration for running t
 6. In the **Worker** field use: `WALLET.worker`
 7. In the **Password** field use: `x` or the value required by your pool.
 
-## Adding the PEARL configuration
+### Adding the PEARL configuration
 
 Paste the following block into the flight sheet **Extra config arguments** field, or add it to `h-config.sh` on the rig:
 
@@ -103,4 +124,3 @@ After saving the flight sheet, apply it to your rig and wait for the miner to st
 ```bash
 tail -f /var/log/miner/custom/houdini/houdini.log
 ```
-
